@@ -21,9 +21,7 @@ public class Main {
          l1.addProducto(P1);
          l1.addProducto(P2);
          //HABIA UN ERROR EN EL ANTERIOR COMMIT
-         System.out.println("Codigos de los productos registrados ");
-         System.out.println(l1.buscarProducto("c1"));
-         System.out.println(l1.buscarProducto("c2"));
+         P1.imprime_etiqueta();
          
     }
 }
