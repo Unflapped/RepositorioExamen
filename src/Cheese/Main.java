@@ -13,7 +13,15 @@ package Cheese;
 public class Main {
     
      public static void main(String[] args) {
-    
-         System.out.println("1º Gdam: Entornos de desarrollo");
+         Producto P1= new Producto("c1","astuariana",2,20);
+         Producto P2= new Producto("c2","gallega",4,10);
+         ListaProductos l1=new ListaProductos();
+         
+         l1.addProducto(P1);
+         l1.addProducto(P2);
+         
+         System.out.println(P1.getcode());
+         System.out.println(P2.getcode());
+         
     }
 }
