@@ -42,7 +42,11 @@ public class ListaProductos {
     
         if (campo.replace(" ","") == "")  return true; else return false;
     }
-
+    /**
+     * 
+     * @param prod, este basicamente es una isntanciacion del objeto producto con todas las propiedades que este contiene
+     * @return si encuentra un producto con el mismo codigo devuelve un valor nulo, en caso de no existir otro proucto con este coodigo devuelve el producto 
+     */
     public Producto addProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -54,7 +58,11 @@ public class ListaProductos {
         listaP.put(prod.getcode(), prod);
         return prod;
     }
-
+    /**
+     * 
+     * @param codigo, es el String identificador del producto 
+     * @return producto eliminado
+     */
     public Producto eliminarProducto(String codigo) { 
         
         Producto prod = buscarProducto(codigo);
@@ -65,6 +73,11 @@ public class ListaProductos {
         }
         return prod;
     }
+    /**
+     * 
+     * @param codigo, al igual que en eliminar es el String que identifica al producto
+     * @return en caso de no encontrar el codigo devuelve nulo y en caso de encontralo devuelve el codigo introducido
+     */
 
     public Producto buscarProducto(String codigo) { 
         Producto prod = null;
@@ -76,13 +89,19 @@ public class ListaProductos {
             return listaP.get(codigo);
         }
     }
-
+    /**
+     * 
+     * @return delvuelve la lista de productos añadidos
+     */
     public ArrayList<Producto> getProductos() {
         ArrayList<Producto> prodsList = new ArrayList<>();
         prodsList.addAll(listaP.values());
         return prodsList;
     }
-    
+    /**
+     * 
+     * @return devuelve la cantidad de productos totales almacenados en la variable n 
+     */
     public int totalProductos(){
             return this.getN();
     }
