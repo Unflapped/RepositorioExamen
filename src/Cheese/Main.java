@@ -19,9 +19,10 @@ public class Main {
          
          l1.addProducto(P1);
          l1.addProducto(P2);
-         
-         System.out.println(P1.getcode());
-         System.out.println(P2.getcode());
+         //HABIA UN ERROR EN EL ANTERIOR COMMIT
+         System.out.println("Codigos de los productos registrados ");
+         System.out.println(l1.buscarProducto("c1"));
+         System.out.println(l1.buscarProducto("c2"));
          
     }
 }
